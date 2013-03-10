@@ -1,0 +1,154 @@
+// Place all the styles related to the Products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+h1
+{
+  text-align: center;
+  color: white;
+}
+h2
+{
+  text-align: center;
+  color: white;
+}
+p
+{
+  margin-top:0px;
+}
+div.header
+{
+  z-index: 5;
+  position:fixed; 
+  top:0px; 
+  right:50%; 
+  left:50%;
+  background-color:#423D3A;
+  width: 1000px;
+  height: 100px;
+  margin-left: -510px;
+  padding: 10px;
+  box-shadow: 5px 5px 5px black;
+}
+div.backdrop
+{
+  margin-top: 100px;
+  width: 1000px;
+  overflow: auto;
+  background-color: black; 
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.left_half
+{
+  float: left;
+  width: 400px;
+}
+div.about
+{
+  width: 400px;
+  border-radius: 15px;
+  background-color: #cccccc; 
+  padding: 3px;
+}
+
+div.pics {  
+    height:  300px;  
+    width:   300px;  
+    padding: 0;  
+    margin-top:  15px; 
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto; 
+} 
+ 
+div.pics img {  
+    padding: 0px;    
+    width:  300px; 
+    height: 300px; 
+    top:  0; 
+    left: 0;
+    box-shadow: 5px 5px 5px black;
+} 
+
+div.right_half
+{
+  float: right;
+  width: 575px;
+
+}
+
+div.products
+{
+  width: 560px;
+  border-radius: 15px;
+  background-color: #cccccc; 
+  padding: 3px;
+}
+
+div.product
+{
+  height: 100px;
+  width: 500px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
+  background-color: gray;
+  box-shadow: 5px 5px 5px black;
+}
+
+div.image
+{
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left;
+  height: 100px;
+  width:100px;
+}
+div.text_area
+{
+  width:76%;
+  float:left;
+}
+div.top_row
+{
+  width: 100%;
+  height: 10px;
+  float:left;
+}
+div.name
+{
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left;
+  font-weight:bold;
+}
+div.price
+{
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left;
+}
+div.paypall_button
+{
+  padding-left: 10px;
+  padding-right: 0px;
+  margin-right: 0px;
+  float: right;
+}
+div.description
+{
+  width:100%;
+  padding: 10px;
+  float: left;
+}
+
+a:link 
+{
+  color:white;
+  margin: 10px;
+  padding-top: 20px;
+}

@@ -1,0 +1,75 @@
+
+<%= render 'common/header' %>
+<div class="backdrop">
+  <div class="left_half">
+    <h2>About Us</h2>
+    <div class="about">
+
+      <script>
+        $('.pics').cycle({ 
+          fx:    'zoom', 
+          sync:  false, 
+          delay: -2000 
+          });  
+      </script>
+      <div class="pics"> 
+        <% @pictures.each do |picture| %>
+          <%= image_tag picture.image.url(:original), size: "100x100" %>
+        <% end %>
+      </div style='margin-top:0px;'>
+
+      <p>About 3 Dogs Rocketry, LLC</P>
+      <p> 3 Dogs Rocketry, LLC was started by L3 flyer and TAP member John Wilke (TRA#6983) in 2009.  Wilke always liked two things about rocketry – FREE SHIPPING of goodies, and Kevlar® shock cords.  Due to Wilke’s “day job”, he had some excellent contacts within the Kevlar® manufacturing business.  After selecting 6 different weights of Kevlar® cord, 3 Dogs Rocketry, LLC was born, with a primary focus in supplying high-quality shock cords to the rocketry community – with FREE SHIPPING on qualifying orders.</p>
+      <p>Wilke (TRA #6983) has hundreds of HPR flights under his belt, including Hybrids and Experimental motors.  An “altitude hound”, Wilke has held several TRA altitude records over the years.  The “3 Dogs” refers to Wilke’s propensity to adopt and rescue unwanted or at-risk dogs.  John, his hounds, and his wife Evonna reside in Windsor, Colorado.  </p>
+    </div>
+    <div style="margin-top: 15px;">
+      <div style="float:right;">
+        <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_cart">
+        <input type="hidden" name="business" value="SLMMRWCSJ26BC">
+        <input type="hidden" name="display" value="1">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+      </div>
+      <div style="float:right;margin-top: 5px;">
+        <%= link_to("Anchor Specifications", "THE 3 DOG ANCHOR.pdf")%>
+      </div>
+    </div>
+  </div>
+  <div class="right_half">
+    <h2>Selection</h2>
+    <div class="products">
+      <% @products.each do |product| %>
+        <div class="product">
+          <div class="image"><%= image_tag product.picture.url(:thumb), size: "100x100" %></div>
+          <div class="text_area">
+            <div class="top_row">
+              <div class="name"><%= product.name %></div>
+              <div class="price">
+                <%= number_to_currency product.price, :unit => "$" %>
+                <% if product.per_foot %>                
+                  /ft
+                <% else %>
+                  each
+                <% end %>
+              </div>
+              <div class="paypall_button">
+                <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="hosted_button_id" value=<%= product.paypall_button_value %>>
+                  <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_cart_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </form>
+              </div>
+            </div>
+            <div class="description"><%= product.description %></div>
+          </div>
+          </br>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  </br>
+</div>
+
