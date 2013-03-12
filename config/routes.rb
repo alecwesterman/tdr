@@ -67,6 +67,4 @@ ThreeDogs::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
 
 
-  match 'contact' => 'contact#new', :as => 'contact', :via => :get
-  match 'contact' => 'contact#create', :as => 'contact', :via => :post
 end

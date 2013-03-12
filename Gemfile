@@ -41,3 +41,4 @@ gem 'execjs'
 gem 'minitest'
 gem 'activeadmin', git: 'git://github.com/gregbell/active_admin.git'
 gem "paperclip"
+gem 'contact_us'
