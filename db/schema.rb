@@ -46,15 +46,6 @@ ActiveRecord::Schema.define(:version => 20130308184452) do
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
-  create_table "messages", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "subject"
-    t.text     "body"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "pictures", :force => true do |t|
     t.string   "name"
     t.datetime "created_at",         :null => false
